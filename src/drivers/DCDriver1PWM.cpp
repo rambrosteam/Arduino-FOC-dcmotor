@@ -33,7 +33,7 @@ void DCDriver1PWM::configureMicroseconds(int hz, int min_us, int zero_us, int ma
 int DCDriver1PWM::init() {
     if (pinEN!=NOT_SET) {
         pinMode(pinEN, OUTPUT);
-        digitalWrite(pinEN, enable_active_high ? LOW : HIGH);
+        digitalWrite(pinEN, enable_active_high ? HIGH : LOW);
     }
     pinMode(pinPWM, OUTPUT);
     params = _configure1PWM(pwm_frequency, pinPWM);

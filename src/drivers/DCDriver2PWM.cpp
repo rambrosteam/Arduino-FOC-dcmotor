@@ -16,7 +16,7 @@ DCDriver2PWM::DCDriver2PWM(int pinA, int pinB, int pinEN) {
 int DCDriver2PWM::init() {
     if (pinEN!=NOT_SET) {
         pinMode(pinEN, OUTPUT);
-        digitalWrite(pinEN, enable_active_high ? LOW : HIGH);
+        digitalWrite(pinEN, enable_active_high ? HIGH : LOW);
     }
     pinMode(pinA, OUTPUT);
     pinMode(pinB, OUTPUT);

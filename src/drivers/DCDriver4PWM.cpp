@@ -17,7 +17,7 @@ DCDriver4PWM::DCDriver4PWM(int pinA_h, int pinA_l, int pinB_h, int pinB_l, int p
 int DCDriver4PWM::init() {
     if (pinEN!=NOT_SET) {
         pinMode(pinEN, OUTPUT);
-        digitalWrite(pinEN, enable_active_high ? LOW : HIGH);
+        digitalWrite(pinEN, enable_active_high ? HIGH : LOW);
     }
     pinMode(pinA_h, OUTPUT);
     pinMode(pinA_l, OUTPUT);

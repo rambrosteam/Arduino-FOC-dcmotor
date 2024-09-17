@@ -15,7 +15,7 @@ DCDriver1PWM1Dir::DCDriver1PWM1Dir(int pinPWM, int pinDIR, int pinEN) {
 int DCDriver1PWM1Dir::init() {
     if (pinEN!=NOT_SET) {
         pinMode(pinEN, OUTPUT);
-        digitalWrite(pinEN, enable_active_high ? LOW : HIGH);
+        digitalWrite(pinEN, enable_active_high ? HIGH : LOW);
     }
     pinMode(pinDIR, OUTPUT);
     digitalWrite(pinDIR, HIGH);
